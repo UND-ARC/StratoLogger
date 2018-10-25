@@ -1,14 +1,14 @@
 # name
-name: New Repository Documentation
+name: StratoLogger Documentation
 
 # description
-description: Documentation site for the new respository.
+description: How to program, and field-program, a PerfectFlite StratoLogger.
 
 # site theme
 theme: jekyll-theme-minimal
 
 # author
 author: UND-ARC
-author_email: 
+author_email: mishaturnbull@gmail.com
 
 show_downloads: true

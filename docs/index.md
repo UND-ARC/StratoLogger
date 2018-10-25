@@ -1,5 +1,7 @@
-# New Repository Template
+# StratoLogger Repository
 
-This is the homepage for the Jekyll site that will be associated with the new repository.  Use it to write user documentation, technical specifications, and whatnot.
+This is the home for documentation and settings for Stripe rocket launches
+carrying the [PerfectFlite StratoLogger SL100][stratologger] altimeter.
 
-Note that when editing the site, all the files will end in `.md` but can be linked to as `.html`.  For example, to edit this page, edit `index.md`.  To link to it, use `index.html`.
+
+[stratologger]: http://www.perfectflite.com/sl100.html
