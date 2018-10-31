@@ -31,9 +31,9 @@ launch of the Stripe rocket using a dual-SL100 altimeter configuration.
 | Order | Digits | Meaning              | Expected value #1 | Expected value #2 |
 | ----- | ------ | -------------------- | ----------------- | ----------------- |
 | 1.    | 1      | Selected preset      | 4                 | 4                 |
-| 2.    | [3,4]  | Main deploy altitude | 900               | 850               |
+| 2.    | [3,4]  | Main deploy altitude | 1000              | 950               |
 | 2A.   | Cont. tone | Apogee delay != 0 | No tone sounds   | Tone sounds       |
-| 3.    | [3,6]  | Ap. alt last flight  | Unknown           | Unknown           |
+| 3.    | [3,6]  | Ap. alt last flight  | 4078              | 4080              |
 | 4.    | [2,3]  | Battery voltage level | In range [4,16]  | In range [4,16]   |
 
 - [ ] Ensure altimeter is outputting continuity status (3 beeps every 0.8sec)
