@@ -20,7 +20,7 @@ launch of the Stripe rocket using a dual-SL100 altimeter configuration.
 - [ ] Launch the DataCap software.
 - [ ] Launch the voltage test interface (**Altimeter** -> **Test**).
 - [ ] Ensure no loose connections cause a voltage drop.
-- [ ] Ensure stable voltage in acceptable range of 4V to 16V.
+- [ ] Ensure stable voltage in acceptable range of 6V to 16V.
 - [ ] Disconnect battery power wire from the SL100.
 
 ## Powerup Sequence
@@ -34,7 +34,7 @@ launch of the Stripe rocket using a dual-SL100 altimeter configuration.
 | 2.    | [3,4]  | Main deploy altitude | 1000              | 950               |
 | 2A.   | Cont. tone | Apogee delay != 0 | No tone sounds   | Tone sounds       |
 | 3.    | [3,6]  | Ap. alt last flight  | 4078              | 4080              |
-| 4.    | [2,3]  | Battery voltage level | In range [4,16]  | In range [4,16]   |
+| 4.    | [2,3]  | Battery voltage level | In range [6,16]  | In range [6,16]   |
 
 - [ ] Ensure altimeter is outputting continuity status (3 beeps every 0.8sec)
 
