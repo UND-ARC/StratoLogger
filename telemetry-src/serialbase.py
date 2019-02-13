@@ -6,10 +6,10 @@ This file is responsible for providing a basic SerialInterface object that can
 be used by other programs to read serial data in an easier manner.
 """
 
-from typing import List
+from typing import List, Dict
 
-STRATOLOGGER_LINEFEED = '\r\n'
-UNIX_LINEFEED = '\n'
+STRATOLOGGER_LINEFEED: str = '\r\n'
+UNIX_LINEFEED: str = '\n'
 
 
 class SerialInterface (object):
@@ -24,11 +24,11 @@ class SerialInterface (object):
         :param name: str: the name of the interface.
         """
         self.name: str = name
-        self.pins: dict = {"RX": -1,
-                           "TX": -1,
-                           "Vcc": -1,
-                           "GND": -1,
-                           }
+        self.pins: Dict[str, int] = {"RX": -1,
+                                     "TX": -1,
+                                     "Vcc": -1,
+                                     "GND": -1,
+                                    }
         self.baudrate: int = 115200  # decently safe default, changeable later
         self.stopbits: int = 1
         self.parity: str = 'even'
@@ -44,7 +44,7 @@ class SerialInterface (object):
         """
         self.serial_buffer += chars
 
-    def read_buffer_no_overwrite(self):
+    def read_buffer_no_overwrite(self) -> str:
         """
         Returns the current status of the serial buffer, but does *NOT*
         empty it.  For that case, use the method
@@ -55,7 +55,7 @@ class SerialInterface (object):
         """
         return self.serial_buffer
 
-    def read_buffer(self):
+    def read_buffer(self) -> str:
         """
         Returns the buffer, and empties it.
 
@@ -65,7 +65,7 @@ class SerialInterface (object):
         self.serial_buffer = ""
         return bufcpy
 
-    def normalize_altitudes(self):
+    def normalize_altitudes(self) -> List[int]:
         """
         This method returns a list of integers that represents the
         output data from the PerfectFlite StratoLogger altimeter.
