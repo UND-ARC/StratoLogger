@@ -21,6 +21,7 @@ class SerialInterface (object):
     def __init__(self, name: str):
         """Create a SerialInterface object.
 
+        :rtype: object
         :param name: str: the name of the interface.
         """
         self.name: str = name
@@ -29,11 +30,20 @@ class SerialInterface (object):
                                      "Vcc": -1,
                                      "GND": -1,
                                     }
-        self.baudrate: int = 115200  # decently safe default, changeable later
+        self.baudrate: int = 9600  # decently safe default, changeable later
         self.stopbits: int = 1
         self.parity: str = 'even'
 
         self.serial_buffer: str = ""
+
+    def read_serial_data(self):
+        """
+        Overriden in subclasses.
+
+        Reads data off the wire when it arrives and adds it to the buffer.
+        :return: nothing
+        """
+        raise NotImplemented("read_serial_data has not been implemented")
 
     def write_to_buffer(self, chars: str):
         """
