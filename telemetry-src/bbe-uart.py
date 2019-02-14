@@ -10,10 +10,7 @@ BeagleBoneSerial object importable by other files.
 
 import serialbase
 import serial  # pip package pyserial
-import os
 
-
-SETUP_FILE_FLAG = "/etc/"
 
 class BeagleBoneSerial (serialbase.SerialInterface):
     """
