@@ -9,7 +9,7 @@ BeagleBoneSerial object importable by other files.
 """
 
 import serialbase
-import Adafruit_BBIO.UART as UART
+import serial  # pip package pyserial
 import os
 
 
@@ -35,9 +35,19 @@ class BeagleBoneSerial (serialbase.SerialInterface):
                      "Vcc": 3,
                      "GND": 1
                      }
-        # the pin dict is not actually used, since
-        # Adafruit handles it for us.  however, still
-        # good to set it up correctly for documentation
-        UART.setup("UART1")
 
+        self._serial = serial.Serial("/dev/ttyO1",
+                                     baudrate=self.baudrate,
+                                     timeout=0,
+                                     parity=serial.PARITY_NONE,
+                                     stopbits=1,
+                                     )
 
+    def read_serial_data(self):
+        """
+        Read all available data from the wire and write it to buffer.
+
+        :return: nothing
+        """
+        readin = self._serial.readall()
+        self.write_to_buffer(readin)
