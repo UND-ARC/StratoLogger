@@ -23,6 +23,23 @@ Steps to interfacing:
 5. Connect the battery to the screw terminals on the SL100.
 6. Immediately select **Data** -> **Acquire**.  This must be done before the
    altimeter completes the powerup sequence.
+   
+## Wiring the DT4U 
+
+<div style="text-align:center">
+    <!-- sorry about this if you're reading this file as text or offline... -->
+    <img src="https://github.com/und-arc/StratoLogger/raw/master/docs/dt4u.png"/>
+</div>
+
+Pinout, from left to right:
+
+| Pin number | Function |
+| ---------- | -------- |
+| 1          | Ground   |
+| 2          | N/C      |
+| 3          | RX into DT4U; wire to TX from StratoLogger |
+| 4          | TX from DT4U; wire to RX from StratoLogger |
+| 5          | +3.3V    |
 
 [sl100]: http://perfectflite.com/sl100.html
 [pigtail]: http://perfectflite.com/cabpg.html
